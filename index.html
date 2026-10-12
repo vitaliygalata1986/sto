@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#171918" />
+    <meta
+      name="description"
+      content="ОБЕРТ — концепція автосервісу в Миколаєві. Технічне обслуговування, діагностика та ремонт авто. Орієнтовні ціни та запис за телефоном +380 98 891 24 54."
+    />
+    <title>ОБЕРТ — автосервіс у Миколаєві</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preload" as="image" href="assets/workshop.webp" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти до вмісту</a>
+    <svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 19 19 5M5 5h14v14" /></symbol>
+        <symbol id="i-oil" viewBox="0 0 40 40">
+          <path
+            d="m7 15 7-4 13 5 5-2 3 5-7 4v9H8V19H4v-6h5M16 12V7h8M35 25s-3 4-3 6a3 3 0 0 0 6 0c0-2-3-6-3-6Z"
+          />
+        </symbol>
+        <symbol id="i-scan" viewBox="0 0 40 40">
+          <rect x="5" y="6" width="30" height="22" rx="3" />
+          <path d="M12 34h16M20 28v6M10 18h6l3-6 5 11 3-5h4" />
+        </symbol>
+        <symbol id="i-wheel" viewBox="0 0 40 40">
+          <circle cx="20" cy="20" r="15" />
+          <circle cx="20" cy="20" r="7" />
+          <circle cx="20" cy="20" r="2" />
+          <path d="m20 5 3 8M35 20l-8 3M20 35l-3-8M5 20l8-3" />
+        </symbol>
+        <symbol id="i-engine" viewBox="0 0 40 40">
+          <path d="M12 12h15l5 5h4v13h-7l-4 4H12l-5-6V16h5ZM16 7h9M20 7v5M3 20v8M7 24H3M32 17v8" />
+        </symbol>
+        <symbol id="i-spring" viewBox="0 0 40 40">
+          <path d="M20 3v6M12 9h16l-16 6 16 6-16 6 16 6H12M20 33v5M9 3h22M9 38h22" />
+        </symbol>
+        <symbol id="i-climate" viewBox="0 0 40 40">
+          <path
+            d="M20 3v34M5 11l30 18M5 29l30-18M15 6l5 5 5-5M15 34l5-5 5 5M5 17l7-2-2-7M30 32l-2-7 7-2M10 32l2-7-7-2M35 17l-7-2 2-7"
+          />
+        </symbol>
+        <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" /></symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24">
+          <path d="m8 3 3 5-3 3a15 15 0 0 0 5 5l3-3 5 3-1 4C10 23 1 14 4 4Z" />
+        </symbol>
+      </defs>
+    </svg>
+
+    <header class="header" id="top">
+      <div class="container header-inner">
+        <a class="logo" href="#top" aria-label="ОБЕРТ — на початок"
+          ><span class="logo-mark" aria-hidden="true"></span
+          ><span>ОБЕРТ<span class="logo-sub">АВТОСЕРВІС · МИКОЛАЇВ</span></span></a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="navigation"
+          aria-label="Відкрити меню"
+        >
+          <span></span><span></span>
+        </button>
+        <nav id="navigation" aria-label="Головне меню">
+          <a href="#services">Послуги</a><a href="#prices">Ціни</a><a href="#about">Про сервіс</a
+          ><a href="#process">Як працюємо</a><a href="#contacts">Контакти</a>
+        </nav>
+        <a class="header-phone" href="tel:+380988912454"
+          >+380 98 891 24 54 <svg><use href="#i-arrow" /></svg
+        ></a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <img
+          class="hero-image"
+          src="assets/workshop.webp"
+          width="1536"
+          height="1024"
+          alt="Ілюстрація автомобіля в сучасній майстерні"
+          fetchpriority="high"
+        />
+        <div class="hero-shade"></div>
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="orange-dot"></span> ВАШ АВТОСЕРВІС У МИКОЛАЄВІ</p>
+            <h1 id="hero-title">Ваше авто.<br />Наша <span>справа.</span></h1>
+            <p class="hero-description">
+              Від планового ТО до складного ремонту.<br />Зрозуміло про несправності. Відкрито про
+              ціни.<br />З увагою до вашого автомобіля.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-orange" href="#contacts"
+                >Записатися на сервіс <svg><use href="#i-arrow" /></svg></a
+              ><a class="text-link light-link" href="#prices">Переглянути ціни <span>↓</span></a>
+            </div>
+            <p class="hero-note">
+              <svg><use href="#i-check" /></svg> Почнімо з розмови про ваше авто
+            </p>
+          </div>
+          <div class="hero-caption">
+            <span class="caption-cross">+</span
+            ><span>УВАГА ДО ДЕТАЛЕЙ.<br /><strong>ВПЕВНЕНІСТЬ У РУСІ.</strong></span>
+          </div>
+          <a class="hero-scroll" href="#services"><span>ГОРТАЙТЕ ДАЛІ</span><span>↓</span></a>
+          <span class="hero-image-note">Візуалізація сервісу</span>
+        </div>
+      </section>
+
+      <div class="principles">
+        <div class="container principles-grid">
+          <div>
+            <span class="principle-number">01 /</span>
+            <p>Спочатку розібратися<span>Діагностика перед ремонтом</span></p>
+          </div>
+          <div>
+            <span class="principle-number">02 /</span>
+            <p>Усе по поличках<span>Роботи та запчастини окремо</span></p>
+          </div>
+          <div>
+            <span class="principle-number">03 /</span>
+            <p>На зв’язку з вами<span>Деталі візиту — одним дзвінком</span></p>
+          </div>
+        </div>
+      </div>
+
+      <section class="section services" id="services" aria-labelledby="services-title">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow muted">01 / ПОСЛУГИ</p>
+              <h2 id="services-title">Щоб кожен кілометр<br />був у задоволення.</h2>
+            </div>
+            <p class="section-intro">
+              Планове обслуговування чи незвичний звук?<br />Оберіть напрямок — і подивіться,<br />з
+              чого можна почати.
+            </p>
+          </div>
+          <div class="services-grid">
+            <a class="service-card" href="#prices" data-category-link="maintenance"
+              ><div class="service-top">
+                <svg class="service-icon"><use href="#i-oil" /></svg><span>01</span>
+              </div>
+              <h3>Планове ТО</h3>
+              <p>Заміна оливи, фільтрів та технічних рідин. Базова турбота про ресурс авто.</p>
+              <div class="service-bottom">
+                <span>Подивитися ціни</span><svg><use href="#i-arrow" /></svg></div
+            ></a>
+            <a class="service-card" href="#prices" data-category-link="diagnostics"
+              ><div class="service-top">
+                <svg class="service-icon"><use href="#i-scan" /></svg><span>02</span>
+              </div>
+              <h3>Діагностика</h3>
+              <p>Перевірка електронних систем та ходової. Знаходимо причину, а не лише симптом.</p>
+              <div class="service-bottom">
+                <span>Подивитися ціни</span><svg><use href="#i-arrow" /></svg></div
+            ></a>
+            <a class="service-card" href="#prices" data-category-link="chassis"
+              ><div class="service-top">
+                <svg class="service-icon"><use href="#i-spring" /></svg><span>03</span>
+              </div>
+              <h3>Ходова та підвіска</h3>
+              <p>Амортизатори, важелі, втулки та рульове керування. Для комфортної дороги.</p>
+              <div class="service-bottom">
+                <span>Подивитися ціни</span><svg><use href="#i-arrow" /></svg></div
+            ></a>
+            <a class="service-card" href="#prices" data-category-link="chassis"
+              ><div class="service-top">
+                <svg class="service-icon"><use href="#i-wheel" /></svg><span>04</span>
+              </div>
+              <h3>Гальмівна система</h3>
+              <p>Колодки, диски й гальмівна рідина. Увага до того, що відповідає за зупинку.</p>
+              <div class="service-bottom">
+                <span>Подивитися ціни</span><svg><use href="#i-arrow" /></svg></div
+            ></a>
+            <a class="service-card" href="#prices" data-category-link="engine"
+              ><div class="service-top">
+                <svg class="service-icon"><use href="#i-engine" /></svg><span>05</span>
+              </div>
+              <h3>Двигун і трансмісія</h3>
+              <p>Привід ГРМ, зчеплення, обслуговування коробки передач та ремонт двигуна.</p>
+              <div class="service-bottom">
+                <span>Подивитися ціни</span><svg><use href="#i-arrow" /></svg></div
+            ></a>
+            <a class="service-card" href="#prices" data-category-link="climate"
+              ><div class="service-top">
+                <svg class="service-icon"><use href="#i-climate" /></svg><span>06</span>
+              </div>
+              <h3>Кондиціонування</h3>
+              <p>Перевірка системи, заправка кондиціонера та заміна фільтра салону.</p>
+              <div class="service-bottom">
+                <span>Подивитися ціни</span><svg><use href="#i-arrow" /></svg></div
+            ></a>
+          </div>
+          <div class="services-help">
+            <span>Не знаєте, яка саме послуга потрібна? Просто опишіть, що турбує.</span
+            ><a class="text-link" href="tel:+380988912454"
+              >Поговорити з майстром <svg><use href="#i-arrow" /></svg
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section prices" id="prices" aria-labelledby="prices-title">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow muted">02 / ВАРТІСТЬ РОБІТ</p>
+              <h2 id="prices-title">Більше ясності.<br />Менше несподіванок.</h2>
+            </div>
+            <div class="section-intro">
+              <span class="demo-label">Демонстраційний прайс</span>
+              <p>
+                Ціни нижче — орієнтири для макета.<br />Фактичну вартість і доступність послуг<br />потрібно
+                уточнити телефоном.
+              </p>
+            </div>
+          </div>
+          <div class="price-layout">
+            <div class="price-list">
+              <div class="price-filters" role="group" aria-label="Фільтр послуг" hidden>
+                <button class="active" data-filter="all" aria-pressed="true">Усі послуги</button
+                ><button data-filter="maintenance" aria-pressed="false">ТО</button
+                ><button data-filter="diagnostics" aria-pressed="false">Діагностика</button
+                ><button data-filter="chassis" aria-pressed="false">Ходова й гальма</button
+                ><button data-filter="engine" aria-pressed="false">Двигун</button
+                ><button data-filter="climate" aria-pressed="false">Клімат</button>
+              </div>
+              <div class="price-table-head"><span>ПОСЛУГА</span><span>РОБОТА, ВІД</span></div>
+              <div class="price-rows">
+                <label class="price-row" data-category="maintenance"
+                  ><input
+                    type="checkbox"
+                    value="400"
+                    data-service="Заміна оливи та масляного фільтра"
+                  /><span
+                    >Заміна оливи та масляного фільтра<small
+                      >Без вартості оливи та фільтра</small
+                    ></span
+                  ><strong>400 <small>грн</small></strong></label
+                >
+                <label class="price-row" data-category="maintenance"
+                  ><input
+                    type="checkbox"
+                    value="200"
+                    data-service="Заміна повітряного фільтра"
+                  /><span>Заміна повітряного фільтра<small>Фільтр двигуна</small></span
+                  ><strong>200 <small>грн</small></strong></label
+                >
+                <label class="price-row" data-category="diagnostics"
+                  ><input type="checkbox" value="500" data-service="Комп’ютерна діагностика" /><span
+                    >Комп’ютерна діагностика<small
+                      >Зчитування помилок електронних систем</small
+                    ></span
+                  ><strong>500 <small>грн</small></strong></label
+                >
+                <label class="price-row" data-category="diagnostics"
+                  ><input type="checkbox" value="300" data-service="Діагностика ходової" /><span
+                    >Діагностика ходової<small>Огляд елементів підвіски</small></span
+                  ><strong>300 <small>грн</small></strong></label
+                >
+                <label class="price-row" data-category="chassis"
+                  ><input
+                    type="checkbox"
+                    value="500"
+                    data-service="Заміна гальмівних колодок (вісь)"
+                  /><span
+                    >Заміна гальмівних колодок<small>Одна вісь, без вартості колодок</small></span
+                  ><strong>500 <small>грн</small></strong></label
+                >
+                <label class="price-row" data-category="chassis"
+                  ><input
+                    type="checkbox"
+                    value="600"
+                    data-service="Заміна амортизатора (1 шт.)"
+                  /><span>Заміна амортизатора<small>Одна штука, без вартості деталі</small></span
+                  ><strong>600 <small>грн</small></strong></label
+                >
+                <label class="price-row" data-category="chassis"
+                  ><input
+                    type="checkbox"
+                    value="500"
+                    data-service="Заміна гальмівної рідини"
+                  /><span>Заміна гальмівної рідини<small>Без вартості рідини</small></span
+                  ><strong>500 <small>грн</small></strong></label
+                >
+                <label class="price-row" data-category="engine"
+                  ><input type="checkbox" value="3000" data-service="Заміна комплекту ГРМ" /><span
+                    >Заміна комплекту ГРМ<small>Для ремінного приводу, без запчастин</small></span
+                  ><strong>3 000 <small>грн</small></strong></label
+                >
+                <label class="price-row" data-category="engine"
+                  ><input type="checkbox" value="600" data-service="Заміна оливи в МКПП" /><span
+                    >Заміна оливи в МКПП<small>Без вартості оливи</small></span
+                  ><strong>600 <small>грн</small></strong></label
+                >
+                <label class="price-row" data-category="climate"
+                  ><input
+                    type="checkbox"
+                    value="1000"
+                    data-service="Обслуговування кондиціонера"
+                  /><span
+                    >Обслуговування кондиціонера<small>Холодоагент оплачується окремо</small></span
+                  ><strong>1 000 <small>грн</small></strong></label
+                >
+                <label class="price-row" data-category="climate"
+                  ><input type="checkbox" value="200" data-service="Заміна фільтра салону" /><span
+                    >Заміна фільтра салону<small>Без вартості фільтра</small></span
+                  ><strong>200 <small>грн</small></strong></label
+                >
+              </div>
+              <p class="price-footnote">
+                * Вартість залежить від моделі, стану авто та складності доступу. Запчастини й
+                витратні матеріали розраховуються окремо. Це не остаточний кошторис.
+              </p>
+            </div>
+            <aside class="estimate" aria-labelledby="estimate-title">
+              <div class="estimate-top">
+                <span class="eyebrow">ВАШ СЕРВІСНИЙ СПИСОК</span><svg><use href="#i-arrow" /></svg>
+              </div>
+              <h3 id="estimate-title">Сплануйте<br />свій візит.</h3>
+              <p class="estimate-description">
+                Позначте потрібні роботи у списку. Ми підсумуємо орієнтовну вартість.
+              </p>
+              <div class="estimate-results" aria-live="polite" aria-atomic="true">
+                <p id="selection-count">Послуги ще не обрані</p>
+                <div class="estimate-total">
+                  <span>від</span> <strong id="estimate-total">0</strong> <span>грн</span>
+                </div>
+              </div>
+              <p class="estimate-note">
+                Орієнтир за демонстраційним прайсом.<br />Без запчастин і витратних матеріалів.
+              </p>
+              <button class="button button-orange" id="review-selection" type="button" hidden>
+                Переглянути список <svg><use href="#i-arrow" /></svg>
+              </button>
+              <a class="estimate-call" href="tel:+380988912454">Уточнити ціну телефоном</a>
+              <button class="reset-selection" type="button" id="reset-selection" hidden>
+                Очистити вибір
+              </button>
+              <noscript
+                ><p>
+                  Для підрахунку ввімкніть JavaScript. Усі ціни й телефон доступні без нього.
+                </p></noscript
+              >
+              <div class="estimate-watermark" aria-hidden="true">О.</div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about" id="about" aria-labelledby="about-title">
+        <div class="container about-layout">
+          <div class="about-visual">
+            <div class="diagram-heading">
+              <span>ОБЕРТ / SERVICE VIEW</span><span class="orange-dot"></span>
+            </div>
+            <svg
+              class="car-diagram"
+              viewBox="0 0 520 540"
+              role="img"
+              aria-labelledby="diagram-title"
+            >
+              <title id="diagram-title">Схема основних напрямків обслуговування автомобіля</title>
+              <defs>
+                <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+                  <path d="M30 0H0V30" fill="none" stroke="#343936" stroke-width=".6" />
+                </pattern>
+              </defs>
+              <rect width="520" height="540" fill="url(#grid)" />
+              <g fill="none" stroke="#8b938c" stroke-width="2">
+                <path
+                  d="M204 62Q260 38 316 62L338 124 345 384Q343 441 315 462H205Q177 441 175 384L182 124Z"
+                />
+                <path
+                  d="M199 151Q260 130 321 151L313 220H207ZM205 345h110l11 67q-66 26-132 0ZM208 226h104v111H208ZM186 164l14 67v100l-16 53M334 164l-14 67v100l16 53M200 70l-7 46h36l5-51M320 70l7 46h-36l-5-51M202 434h116"
+                />
+                <rect x="165" y="131" width="13" height="63" rx="4" />
+                <rect x="342" y="131" width="13" height="63" rx="4" />
+                <rect x="160" y="354" width="14" height="63" rx="4" />
+                <rect x="346" y="354" width="14" height="63" rx="4" />
+                <path d="M199 252h-14l-8 31h20M321 252h14l8 31h-20" />
+              </g>
+              <g fill="none" stroke="#ff632e" stroke-width="1.5">
+                <circle cx="260" cy="110" r="27" stroke-dasharray="4 5" />
+                <path
+                  d="M260 110H375l25-25h70M174 164H100l-20 25H35M290 272h88l25-24h67M260 397H99l-20 25H35"
+                />
+                <circle cx="260" cy="110" r="5" fill="#ff632e" />
+                <circle cx="174" cy="164" r="5" fill="#ff632e" />
+                <circle cx="290" cy="272" r="5" fill="#ff632e" />
+                <circle cx="260" cy="397" r="5" fill="#ff632e" />
+              </g>
+              <g font-family="Arial, sans-serif" font-size="12" fill="#d3d7d2">
+                <text x="394" y="73">ДВИГУН</text>
+                <text x="34" y="177">ГАЛЬМА</text>
+                <text x="399" y="237">КЛІМАТ</text>
+                <text x="34" y="447">ПІДВІСКА</text>
+              </g>
+            </svg>
+            <div class="diagram-footer"><span>КОЖНА ДЕТАЛЬ МАЄ ЗНАЧЕННЯ</span><span>↗</span></div>
+          </div>
+          <div class="about-copy">
+            <p class="eyebrow">03 / НАШ ПІДХІД</p>
+            <h2 id="about-title">Хороший сервіс —<br />це коли<br /><span>все зрозуміло.</span></h2>
+            <p class="about-lead">
+              Вам не обов’язково розбиратися у двигунах. Достатньо розуміти, що відбувається з вашим
+              авто.
+            </p>
+            <div class="about-point">
+              <span>01</span>
+              <div>
+                <h3>Від симптомів до причини</h3>
+                <p>
+                  Розкажіть, коли з’являється звук, вібрація чи помилка. Ці деталі допоможуть обрати
+                  діагностику.
+                </p>
+              </div>
+            </div>
+            <div class="about-point">
+              <span>02</span>
+              <div>
+                <h3>Спочатку обговорення</h3>
+                <p>Перелік робіт, потрібні деталі та вартість варто погодити до початку ремонту.</p>
+              </div>
+            </div>
+            <div class="about-point">
+              <span>03</span>
+              <div>
+                <h3>План на наступні кілометри</h3>
+                <p>
+                  Під час візиту уточніть, що потребує уваги зараз і коли планувати наступне ТО.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section process" id="process" aria-labelledby="process-title">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow muted">04 / ЯК ЦЕ ПРАЦЮЄ</p>
+              <h2 id="process-title">Від першого дзвінка<br />до наступної поїздки.</h2>
+            </div>
+            <a class="text-link" href="#contacts"
+              >Почати з розмови <svg><use href="#i-arrow" /></svg
+            ></a>
+          </div>
+          <div class="steps">
+            <article>
+              <div class="step-number">01<span>↗</span></div>
+              <h3>Зв’яжіться з нами</h3>
+              <p>Назвіть марку, модель авто та опишіть задачу. Уточніть адресу і зручний час.</p>
+            </article>
+            <article>
+              <div class="step-number">02<span>↗</span></div>
+              <h3>З’ясуємо причину</h3>
+              <p>Почніть з огляду або діагностики, щоб визначити необхідні роботи.</p>
+            </article>
+            <article>
+              <div class="step-number">03<span>↗</span></div>
+              <h3>Погодимо деталі</h3>
+              <p>Обговоріть кошторис, запчастини та термін виконання до початку ремонту.</p>
+            </article>
+            <article>
+              <div class="step-number">04<span>↗</span></div>
+              <h3>Знову в дорогу</h3>
+              <p>Після обслуговування уточніть виконані роботи та рекомендації для вашого авто.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq" id="faq" aria-labelledby="faq-title">
+        <div class="container faq-layout">
+          <div>
+            <p class="eyebrow muted">05 / КОРИСНО ЗНАТИ</p>
+            <h2 id="faq-title">Є питання?<br />Є відповіді.</h2>
+            <p>А про ваше авто краще<br />поговорити особисто.</p>
+            <a class="text-link" href="tel:+380988912454"
+              >+380 98 891 24 54 <svg><use href="#i-arrow" /></svg
+            ></a>
+          </div>
+          <div class="faq-items">
+            <details>
+              <summary>Як записатися на обслуговування?<span aria-hidden="true">+</span></summary>
+              <p>
+                Зателефонуйте за номером <a href="tel:+380988912454">+380 98 891 24 54</a>. Назвіть
+                марку, модель, рік випуску та причину звернення. Час візиту, адресу і можливість
+                виконання робіт потрібно узгодити телефоном.
+              </p>
+            </details>
+            <details>
+              <summary>Ціни на сайті остаточні?<span aria-hidden="true">+</span></summary>
+              <p>
+                Ні. Зараз на сайті розміщено демонстраційний прайс для попереднього розрахунку.
+                Вказано лише орієнтовну вартість робіт, без деталей і матеріалів. Фактичну суму
+                потрібно погодити з майстром.
+              </p>
+            </details>
+            <details>
+              <summary>
+                Чи можна приїхати зі своїми запчастинами?<span aria-hidden="true">+</span>
+              </summary>
+              <p>
+                Уточніть це під час запису. Повідомте виробника й артикул запчастини, щоб майстер
+                міг перевірити сумісність та пояснити умови її встановлення.
+              </p>
+            </details>
+            <details>
+              <summary>
+                Що робити, якщо не знаю причину несправності?<span aria-hidden="true">+</span>
+              </summary>
+              <p>
+                Опишіть симптоми: незвичний звук, вібрацію, індикатор на панелі або зміну поведінки
+                авто. Це допоможе визначити, з якої перевірки почати. Остаточний висновок потребує
+                огляду автомобіля.
+              </p>
+            </details>
+            <details>
+              <summary>Скільки часу займе ремонт?<span aria-hidden="true">+</span></summary>
+              <p>
+                Тривалість залежить від автомобіля, складності роботи, результатів діагностики та
+                наявності деталей. Уточніть орієнтовний термін під час запису й погодьте його після
+                огляду.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="contacts" id="contacts" aria-labelledby="contacts-title">
+        <div class="container">
+          <div class="contacts-top">
+            <p class="eyebrow">06 / ЗУСТРІНЕМОСЬ НА СЕРВІСІ</p>
+            <span class="location"><span class="location-dot"></span> Миколаїв, Україна</span>
+          </div>
+          <div class="contact-heading">
+            <h2 id="contacts-title">Дайте авто турботу.<br />Собі — спокій.</h2>
+            <a class="contact-arrow" href="tel:+380988912454" aria-label="Зателефонувати для запису"
+              ><svg><use href="#i-arrow" /></svg
+            ></a>
+          </div>
+          <div class="contacts-bottom">
+            <div>
+              <p>ЗАТЕЛЕФОНУЙТЕ ДЛЯ ЗАПИСУ</p>
+              <a class="big-phone" href="tel:+380988912454">+380 98 891 24 54</a>
+            </div>
+            <div class="contact-details">
+              <p>ПЕРЕД ВІЗИТОМ</p>
+              <span>Уточніть адресу, графік роботи<br />та вільний час телефоном.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-main">
+        <a class="logo" href="#top"
+          ><span class="logo-mark" aria-hidden="true"></span
+          ><span>ОБЕРТ<span class="logo-sub">АВТОСЕРВІС · МИКОЛАЇВ</span></span></a
+        >
+        <p>Турбота про авто.<br />Повага до вашого часу.</p>
+        <a class="text-link light-link" href="#top">Нагору ↑</a>
+      </div>
+      <div class="container footer-bottom">
+        <span>© <span id="year">2026</span> ОБЕРТ</span
+        ><span>Дизайн-концепція. Назва, перелік послуг і прайс потребують погодження.</span>
+      </div>
+    </footer>
+    <a class="mobile-call" href="tel:+380988912454"
+      ><svg><use href="#i-phone" /></svg> Зателефонувати для запису
+      <svg><use href="#i-arrow" /></svg
+    ></a>
+
+    <dialog id="selection-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-content">
+        <button class="dialog-close" type="button" aria-label="Закрити">×</button>
+        <p class="eyebrow muted">ПЛАН ВІЗИТУ</p>
+        <h2 id="dialog-title">Ваш список робіт</h2>
+        <p id="dialog-intro">Оберіть роботи в прайсі або обговоріть потрібну послугу телефоном.</p>
+        <ul id="dialog-services"></ul>
+        <p class="dialog-total" id="dialog-total"></p>
+        <p class="dialog-note">
+          Попередній розрахунок за демонстраційними цінами. Запчастини та матеріали не включено.
+          Запис і вартість підтверджуються телефоном.
+        </p>
+        <a class="button button-orange" href="tel:+380988912454"
+          >Зателефонувати <svg><use href="#i-phone" /></svg></a
+        ><button class="copy-button" id="copy-selection" type="button">Скопіювати список</button>
+        <p class="copy-status" id="copy-status" role="status"></p>
+        <textarea
+          id="copy-fallback"
+          readonly
+          aria-label="Список для ручного копіювання"
+          hidden
+        ></textarea>
+      </div>
+    </dialog>
+  </body>
+</html>
