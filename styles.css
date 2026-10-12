@@ -119,7 +119,7 @@ h3 {
   padding: 110px 0;
 }
 .eyebrow {
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.4;
   letter-spacing: 1.7px;
   font-weight: 600;
@@ -167,7 +167,7 @@ h3 {
   display: inline-flex;
   align-items: center;
   gap: 18px;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   white-space: nowrap;
 }
@@ -239,7 +239,7 @@ h3 {
   align-items: center;
 }
 .header nav a {
-  font-size: 12px;
+  font-size: 14px;
   color: #c5c8c3;
   position: relative;
   padding: 12px 0;
@@ -256,6 +256,15 @@ h3 {
   width: 15px;
   height: 2px;
   background: var(--accent);
+}
+.header-phones {
+  display: grid;
+  gap: 4px;
+  flex-shrink: 0;
+}
+.header-phones .header-phone {
+  min-height: 24px;
+  margin: 0;
 }
 .header-phone {
   display: flex;
@@ -293,7 +302,8 @@ h3 {
   position: absolute;
   z-index: -2;
   inset: 0;
-  background: linear-gradient(
+  background:
+    linear-gradient(
       90deg,
       rgba(16, 19, 17, 0.97) 0%,
       rgba(16, 19, 17, 0.89) 23%,
@@ -312,7 +322,7 @@ h3 {
   max-width: 620px;
 }
 .hero .eyebrow {
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 1.7px;
   margin-bottom: 28px;
   color: #d7dad5;
@@ -328,7 +338,7 @@ h3 {
   color: var(--accent);
 }
 .hero-description {
-  font-size: 15px;
+  font-size: 16px;
   color: #bfc3bd;
   line-height: 1.75;
   margin-bottom: 32px;
@@ -342,8 +352,8 @@ h3 {
   display: flex;
   align-items: center;
   gap: 7px;
-  font-size: 11px;
-  color: #a6aea7;
+  font-size: 16px;
+  color: #e0e5dc;
   margin: 20px 0 0;
 }
 .hero-note svg {
@@ -395,7 +405,7 @@ h3 {
   right: 0;
   bottom: 30px;
   color: #c2c5bf;
-  font-size: 9px;
+  font-size: 12px;
 }
 .principles {
   background: var(--ink);
@@ -425,14 +435,14 @@ h3 {
   margin-top: 3px;
 }
 .principles p {
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
   line-height: 1.5;
 }
 .principles p span {
   display: block;
   color: #989f97;
-  font-size: 11px;
+  font-size: 14px;
   margin-top: 4px;
 }
 .section-heading {
@@ -443,7 +453,7 @@ h3 {
   margin-bottom: 45px;
 }
 .section-intro {
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.8;
   color: var(--muted);
   margin: 0;
@@ -493,7 +503,7 @@ h3 {
   margin-bottom: 12px;
 }
 .service-card p {
-  font-size: 12px;
+  font-size: 16px;
   color: var(--muted);
   max-width: 295px;
   margin-bottom: 25px;
@@ -504,7 +514,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 600;
 }
 .service-bottom svg {
@@ -524,12 +534,12 @@ h3 {
   align-items: center;
   gap: 24px;
   padding-top: 30px;
-  font-size: 12px;
+  font-size: 16px;
   color: var(--muted);
 }
 .services-help a {
   color: var(--ink);
-  font-size: 12px;
+  font-size: 14px;
 }
 .prices {
   background: var(--soft);
@@ -539,7 +549,7 @@ h3 {
   display: inline-block;
   border: 1px solid #c7c8be;
   border-radius: 3px;
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: 0.2px;
   color: #53594e;
   padding: 4px 9px;
@@ -566,7 +576,7 @@ h3 {
   color: #565d51;
   padding: 10px 12px;
   border-radius: 3px;
-  font-size: 11px;
+  font-size: 14px;
 }
 .price-filters button:hover {
   border-color: var(--ink);
@@ -580,7 +590,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 1.2px;
   color: #747a6f;
   border-bottom: 1px solid #cfd3c6;
@@ -632,12 +642,12 @@ h3 {
   transform: rotate(45deg);
 }
 .price-row > span {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 600;
 }
 .price-row small {
   font-weight: 400;
-  font-size: 10px;
+  font-size: 14px;
   color: #73796b;
 }
 .price-row > span small {
@@ -651,10 +661,10 @@ h3 {
   letter-spacing: -0.5px;
 }
 .price-row > strong small {
-  font-size: 11px;
+  font-size: 14px;
 }
 .price-footnote {
-  font-size: 10px;
+  font-size: 14px;
   color: #777c6e;
   line-height: 1.65;
   margin: 20px 0 0;
@@ -677,7 +687,7 @@ h3 {
 }
 .estimate-top .eyebrow {
   color: #aaafa5;
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 1px;
   margin: 0;
 }
@@ -694,7 +704,7 @@ h3 {
 }
 .estimate-description {
   color: #a6aea1;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.75;
   margin-bottom: 26px;
 }
@@ -703,7 +713,7 @@ h3 {
   padding-top: 21px;
 }
 .estimate-results > p {
-  font-size: 11px;
+  font-size: 14px;
   color: #a6aea1;
   margin-bottom: 7px;
 }
@@ -722,14 +732,14 @@ h3 {
   color: #c9cec4;
 }
 .estimate-note {
-  font-size: 10px;
+  font-size: 14px;
   color: #9ba392;
   line-height: 1.65;
   margin: 11px 0 23px;
 }
 .estimate .button {
   width: 100%;
-  font-size: 12px;
+  font-size: 14px;
   padding-inline: 15px;
   gap: 10px;
   position: relative;
@@ -738,7 +748,7 @@ h3 {
 .estimate-call {
   display: block;
   text-align: center;
-  font-size: 11px;
+  font-size: 14px;
   margin-top: 18px;
   text-decoration: underline;
   text-underline-offset: 4px;
@@ -751,7 +761,7 @@ h3 {
   padding: 0 0 3px;
   display: block;
   margin: 18px auto 0;
-  font-size: 10px;
+  font-size: 14px;
 }
 .estimate-watermark {
   font-size: 200px;
@@ -769,9 +779,13 @@ h3 {
 }
 .about-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 95px;
   align-items: center;
+}
+/* Содержимое и SVG не должны расширять колонки за пределы контейнера. */
+.about-layout > * {
+  min-width: 0;
 }
 .about-visual {
   border: 1px solid #363c34;
@@ -793,7 +807,9 @@ h3 {
   height: 5px;
 }
 .car-diagram {
+  display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
   margin: 18px 0;
   stroke: none;
@@ -808,7 +824,7 @@ h3 {
 }
 .about-copy > .eyebrow {
   color: #abb2a5;
-  font-size: 10px;
+  font-size: 12px;
 }
 .about h2 {
   font-size: clamp(34px, 3.6vw, 48px);
@@ -819,7 +835,7 @@ h3 {
   color: var(--accent);
 }
 .about-lead {
-  font-size: 13px;
+  font-size: 16px;
   color: #a7b09f;
   line-height: 1.8;
   margin: 24px 0 28px;
@@ -836,12 +852,12 @@ h3 {
   padding-top: 4px;
 }
 .about-point h3 {
-  font-size: 15px;
+  font-size: 18px;
   letter-spacing: -0.2px;
   margin-bottom: 7px;
 }
 .about-point p {
-  font-size: 11px;
+  font-size: 16px;
   color: #9da791;
   max-width: 330px;
   margin: 0;
@@ -882,7 +898,7 @@ h3 {
   margin-bottom: 11px;
 }
 .steps p {
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.8;
   color: var(--muted);
   margin: 0;
@@ -902,7 +918,7 @@ h3 {
   letter-spacing: -2px;
 }
 .faq-layout > div > p:not(.eyebrow) {
-  font-size: 13px;
+  font-size: 16px;
   color: var(--muted);
   margin: 24px 0;
 }
@@ -919,7 +935,7 @@ h3 {
   gap: 20px;
   align-items: center;
   padding: 24px 0;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
   font-weight: 500;
   cursor: pointer;
@@ -938,7 +954,7 @@ h3 {
   color: #b82029;
 }
 .faq-items details > p {
-  font-size: 12px;
+  font-size: 16px;
   color: var(--muted);
   line-height: 1.85;
   max-width: 550px;
@@ -960,14 +976,14 @@ h3 {
 }
 .contacts-top .eyebrow {
   margin: 0;
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 1.5px;
 }
 .location {
   display: flex;
   gap: 8px;
   align-items: center;
-  font-size: 12px;
+  font-size: 14px;
 }
 .location-dot {
   display: block;
@@ -1031,7 +1047,7 @@ h3 {
   border-top: 1px solid #17191840;
 }
 .contacts-bottom p {
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 1.3px;
   margin-bottom: 12px;
 }
@@ -1048,7 +1064,7 @@ h3 {
   padding-right: 16px;
 }
 .contact-details > span {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.8;
 }
 .footer {
@@ -1067,7 +1083,7 @@ h3 {
   font-size: 28px;
 }
 .footer-main > p {
-  font-size: 11px;
+  font-size: 14px;
   color: #9ba393;
   line-height: 1.6;
   margin: 0;
@@ -1075,18 +1091,19 @@ h3 {
   margin-left: 80px;
 }
 .footer-main > .text-link {
-  font-size: 11px;
+  font-size: 14px;
   color: #c9cfc2;
 }
 .footer-bottom {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 25px;
   border-top: 1px solid #323a2c;
   padding-top: 21px;
   padding-bottom: 23px;
   color: #98a18f;
-  font-size: 9px;
+  font-size: 14px;
   line-height: 1.6;
 }
 .mobile-call {
@@ -1125,11 +1142,11 @@ dialog::backdrop {
   margin-bottom: 18px;
 }
 .dialog-content .eyebrow {
-  font-size: 9px;
+  font-size: 12px;
   margin-bottom: 13px;
 }
 #dialog-intro {
-  font-size: 13px;
+  font-size: 16px;
   color: var(--muted);
 }
 #dialog-services {
@@ -1142,7 +1159,7 @@ dialog::backdrop {
   align-items: baseline;
   gap: 20px;
   justify-content: space-between;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.5;
   padding: 12px 0;
   border-bottom: 1px solid var(--line);
@@ -1156,7 +1173,7 @@ dialog::backdrop {
   letter-spacing: -0.5px;
 }
 .dialog-note {
-  font-size: 11px;
+  font-size: 14px;
   color: var(--muted);
 }
 .dialog-content > .button {
@@ -1171,20 +1188,20 @@ dialog::backdrop {
   border-radius: 3px;
   padding: 14px;
   margin-top: 10px;
-  font-size: 12px;
+  font-size: 14px;
 }
 .copy-button:hover {
   background: var(--soft);
 }
 .copy-status {
-  font-size: 12px;
+  font-size: 14px;
   margin: 12px 0 0;
   line-height: 1.5;
 }
 #copy-fallback {
   width: 100%;
   height: 140px;
-  font-size: 12px;
+  font-size: 14px;
   padding: 10px;
   border: 1px solid #aaa;
   margin-top: 10px;
@@ -1199,7 +1216,14 @@ dialog::backdrop {
     padding-top: 120px;
   }
   .hero-shade {
-    background: linear-gradient(90deg, #101311ed 0%, #101311d9 28%, #10131177 49%, #10131100 80%),
+    background:
+      linear-gradient(
+        90deg,
+        #101311ed 0%,
+        #101311d9 28%,
+        #10131177 49%,
+        #10131100 80%
+      ),
       linear-gradient(0deg, #10131199, transparent 22%);
   }
 }
@@ -1246,7 +1270,7 @@ dialog::backdrop {
     margin-bottom: 27px;
   }
   .steps h3 {
-    font-size: 16px;
+    font-size: 18px;
   }
   .faq-layout {
     gap: 45px;
@@ -1269,7 +1293,7 @@ dialog::backdrop {
     font-size: 11px;
   }
   .header-phone {
-    font-size: 11px;
+    font-size: 12px;
   }
   .header-phone svg {
     display: none;
@@ -1292,17 +1316,17 @@ dialog::backdrop {
     max-width: 520px;
   }
   .hero-description {
-    font-size: 14px;
+    font-size: 16px;
   }
   .hero-actions {
     gap: 19px;
   }
   .hero-actions .button {
-    font-size: 12px;
+    font-size: 14px;
     gap: 20px;
   }
   .hero-actions .text-link {
-    font-size: 11px;
+    font-size: 14px;
   }
   .hero-caption {
     display: none;
@@ -1312,10 +1336,10 @@ dialog::backdrop {
     gap: 12px;
   }
   .principles p {
-    font-size: 12px;
+    font-size: 16px;
   }
   .principles p span {
-    font-size: 10px;
+    font-size: 14px;
   }
   .section-heading {
     gap: 24px;
@@ -1325,7 +1349,7 @@ dialog::backdrop {
     letter-spacing: -2px;
   }
   .section-intro {
-    font-size: 11px;
+    font-size: 16px;
     max-width: 255px;
   }
   .service-card {
@@ -1335,7 +1359,7 @@ dialog::backdrop {
     font-size: 18px;
   }
   .service-card p {
-    font-size: 11px;
+    font-size: 16px;
     min-height: 57px;
   }
   .service-top {
@@ -1350,7 +1374,7 @@ dialog::backdrop {
     grid-template-columns: 20px 1fr auto;
   }
   .price-row > span {
-    font-size: 12px;
+    font-size: 16px;
   }
   .price-row > strong {
     font-size: 17px;
@@ -1359,7 +1383,7 @@ dialog::backdrop {
     gap: 5px;
   }
   .price-filters button {
-    font-size: 10px;
+    font-size: 14px;
     padding: 9px 10px;
   }
   .estimate h3 {
@@ -1372,16 +1396,16 @@ dialog::backdrop {
     font-size: 36px;
   }
   .about-lead {
-    font-size: 12px;
+    font-size: 16px;
   }
   .about-point {
     gap: 14px;
   }
   .about-point h3 {
-    font-size: 14px;
+    font-size: 18px;
   }
   .about-point p {
-    font-size: 10px;
+    font-size: 16px;
   }
   .about-visual {
     padding: 15px;
@@ -1394,7 +1418,7 @@ dialog::backdrop {
     gap: 18px;
   }
   .steps p {
-    font-size: 11px;
+    font-size: 16px;
   }
   .faq h2 {
     font-size: 38px;
@@ -1404,13 +1428,13 @@ dialog::backdrop {
     grid-template-columns: 1fr 1.4fr;
   }
   .faq-items summary {
-    font-size: 12px;
+    font-size: 16px;
   }
   .services-help {
-    font-size: 11px;
+    font-size: 16px;
   }
   .services-help a {
-    font-size: 11px;
+    font-size: 14px;
   }
   .footer-main > p {
     margin-left: 30px;
@@ -1441,9 +1465,11 @@ dialog::backdrop {
     font-size: 6px;
   }
   .header-phone {
+    font-size: 12px;
+  }
+  .header-phones {
     margin-left: auto;
     margin-right: 21px;
-    font-size: 11px;
   }
   .menu-toggle {
     display: flex;
@@ -1509,7 +1535,8 @@ dialog::backdrop {
     opacity: 0.85;
   }
   .hero-shade {
-    background: linear-gradient(
+    background:
+      linear-gradient(
         180deg,
         #151816f5 0%,
         #151816e8 28%,
@@ -1520,7 +1547,7 @@ dialog::backdrop {
       linear-gradient(90deg, #15181655, transparent);
   }
   .hero .eyebrow {
-    font-size: 9px;
+    font-size: 12px;
     letter-spacing: 1.4px;
     margin-bottom: 24px;
   }
@@ -1531,7 +1558,7 @@ dialog::backdrop {
     margin-bottom: 22px;
   }
   .hero-description {
-    font-size: 13px;
+    font-size: 16px;
     line-height: 1.75;
     margin-bottom: 27px;
   }
@@ -1542,14 +1569,14 @@ dialog::backdrop {
     padding: 15px 16px;
     min-height: 52px;
     gap: 21px;
-    font-size: 12px;
+    font-size: 14px;
   }
   .hero-actions .text-link {
-    font-size: 11px;
+    font-size: 14px;
     gap: 8px;
   }
   .hero-note {
-    font-size: 10px;
+    font-size: 16px;
     margin-top: 16px;
   }
   .hero-scroll {
@@ -1558,7 +1585,7 @@ dialog::backdrop {
     gap: 14px;
   }
   .hero-image-note {
-    font-size: 8px;
+    font-size: 12px;
     bottom: 27px;
   }
   .principles-grid {
@@ -1573,13 +1600,13 @@ dialog::backdrop {
     gap: 17px;
   }
   .principles p {
-    font-size: 12px;
+    font-size: 16px;
     display: flex;
     align-items: baseline;
     gap: 12px;
   }
   .principles p span {
-    font-size: 10px;
+    font-size: 14px;
     margin: 0;
   }
   .principle-number {
@@ -1591,7 +1618,7 @@ dialog::backdrop {
     margin-bottom: 31px;
   }
   .eyebrow {
-    font-size: 9px;
+    font-size: 12px;
     letter-spacing: 1.4px;
     margin-bottom: 19px;
   }
@@ -1601,7 +1628,7 @@ dialog::backdrop {
     letter-spacing: -1.9px;
   }
   .section-intro {
-    font-size: 12px;
+    font-size: 16px;
     max-width: none;
     margin-top: 22px;
   }
@@ -1629,13 +1656,13 @@ dialog::backdrop {
     margin-bottom: 8px;
   }
   .service-card p {
-    font-size: 11px;
+    font-size: 16px;
     line-height: 1.65;
     min-height: 72px;
     margin-bottom: 15px;
   }
   .service-bottom {
-    font-size: 9px;
+    font-size: 14px;
     gap: 8px;
   }
   .service-bottom svg {
@@ -1645,7 +1672,7 @@ dialog::backdrop {
   }
   .services-help {
     display: block;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 1.7;
     padding-top: 22px;
   }
@@ -1653,7 +1680,7 @@ dialog::backdrop {
     display: flex;
     width: max-content;
     margin-top: 15px;
-    font-size: 12px;
+    font-size: 14px;
   }
   .price-layout {
     grid-template-columns: 1fr;
@@ -1664,7 +1691,7 @@ dialog::backdrop {
     gap: 6px;
   }
   .price-filters button {
-    font-size: 11px;
+    font-size: 14px;
     padding: 10px 12px;
   }
   .price-row {
@@ -1673,13 +1700,13 @@ dialog::backdrop {
     padding: 19px 0;
   }
   .price-row > span {
-    font-size: 12px;
+    font-size: 16px;
   }
   .price-row > strong {
     font-size: 18px;
   }
   .price-row small {
-    font-size: 9px;
+    font-size: 14px;
   }
   .estimate {
     position: relative;
@@ -1707,10 +1734,10 @@ dialog::backdrop {
     margin-bottom: 20px;
   }
   .estimate .button {
-    font-size: 13px;
+    font-size: 14px;
   }
   .about-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 38px;
   }
   .about-copy {
@@ -1719,12 +1746,12 @@ dialog::backdrop {
   .about h2 {
     font-size: 40px;
   }
-  .about h2 br:nth-of-type(1) {
+  .about h2 > br:first-of-type {
     display: none;
   }
   .about-lead {
     max-width: 400px;
-    font-size: 13px;
+    font-size: 16px;
     line-height: 1.8;
   }
   .about-point {
@@ -1732,11 +1759,11 @@ dialog::backdrop {
     margin-top: 24px;
   }
   .about-point h3 {
-    font-size: 16px;
+    font-size: 18px;
   }
   .about-point p {
     max-width: 400px;
-    font-size: 12px;
+    font-size: 16px;
   }
   .about-visual {
     padding: 20px;
@@ -1754,7 +1781,7 @@ dialog::backdrop {
   }
   .process .section-heading .text-link {
     margin-top: 23px;
-    font-size: 12px;
+    font-size: 14px;
   }
   .steps {
     grid-template-columns: repeat(2, 1fr);
@@ -1771,11 +1798,11 @@ dialog::backdrop {
     font-size: 19px;
   }
   .steps h3 {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.3;
   }
   .steps p {
-    font-size: 12px;
+    font-size: 16px;
     line-height: 1.7;
   }
   .faq-layout {
@@ -1789,11 +1816,11 @@ dialog::backdrop {
     margin: 20px 0 16px;
   }
   .faq-items summary {
-    font-size: 13px;
+    font-size: 16px;
     padding: 23px 0;
   }
   .faq-items details > p {
-    font-size: 12px;
+    font-size: 16px;
   }
   .contacts {
     padding: 43px 0;
@@ -1803,10 +1830,10 @@ dialog::backdrop {
     margin-bottom: 26px;
   }
   .contacts-top .eyebrow {
-    font-size: 8px;
+    font-size: 12px;
   }
   .location {
-    font-size: 11px;
+    font-size: 14px;
     margin-top: 18px;
   }
   .contact-heading h2 {
@@ -1831,7 +1858,7 @@ dialog::backdrop {
     padding-top: 24px;
   }
   .contacts-bottom p {
-    font-size: 8px;
+    font-size: 12px;
     margin-bottom: 10px;
   }
   .big-phone {
@@ -1842,7 +1869,7 @@ dialog::backdrop {
     margin-top: 27px;
   }
   .contact-details > span {
-    font-size: 12px;
+    font-size: 14px;
   }
   .footer {
     padding-top: 32px;
@@ -1860,12 +1887,12 @@ dialog::backdrop {
     display: none;
   }
   .footer-main > .text-link {
-    font-size: 10px;
+    font-size: 14px;
   }
   .footer-bottom {
     display: block;
     padding-top: 19px;
-    font-size: 8px;
+    font-size: 14px;
   }
   .footer-bottom > span {
     display: block;
@@ -1886,7 +1913,7 @@ dialog::backdrop {
     border-radius: 4px;
     background: var(--ink);
     color: #fff;
-    font-size: 12px;
+    font-size: 14px;
     box-shadow: 0 4px 22px #0003;
     padding: 12px;
   }
@@ -1913,7 +1940,9 @@ dialog::backdrop {
 }
 @media (max-width: 380px) {
   .header-phone {
-    font-size: 10px;
+    font-size: 12px;
+  }
+  .header-phones {
     margin-right: 10px;
   }
   .logo {
@@ -1931,29 +1960,29 @@ dialog::backdrop {
   .hero-actions .button {
     padding: 14px 12px;
     gap: 13px;
-    font-size: 11px;
+    font-size: 14px;
   }
   .hero-actions .text-link {
-    font-size: 10px;
+    font-size: 14px;
   }
   .principles p {
     gap: 8px;
-    font-size: 11px;
+    font-size: 16px;
   }
   .principles p span {
-    font-size: 9px;
+    font-size: 14px;
   }
   .service-card {
     padding: 20px 13px;
   }
   .service-card h3 {
-    font-size: 16px;
+    font-size: 18px;
   }
   .service-card p {
-    font-size: 10px;
+    font-size: 16px;
   }
   .service-bottom {
-    font-size: 8px;
+    font-size: 14px;
   }
   .contact-heading h2 {
     font-size: 34px;
@@ -1965,7 +1994,7 @@ dialog::backdrop {
     font-size: 34px;
   }
   .price-row > span {
-    font-size: 11px;
+    font-size: 16px;
   }
   .price-row > strong {
     font-size: 16px;
@@ -1976,7 +2005,7 @@ dialog::backdrop {
 }
 .alignment-contact > span {
   display: block;
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 1.3px;
   margin-bottom: 9px;
 }
@@ -1991,17 +2020,17 @@ dialog::backdrop {
 }
 .contact-details address {
   font-style: normal;
-  font-size: 16px;
+  font-size: 24px;
   line-height: 1.7;
 }
 .contact-details .map-link {
   margin-top: 15px;
-  font-size: 12px;
+  font-size: 16px;
   white-space: normal;
 }
 .contact-details .contact-hours {
   display: block;
-  font-size: 11px;
+  font-size: 16px;
   margin-top: 15px;
 }
 .social-section {
@@ -2018,7 +2047,7 @@ dialog::backdrop {
   font-size: 19px;
 }
 .social-section p {
-  font-size: 12px;
+  font-size: 16px;
   margin: 0;
 }
 .social-links {
@@ -2034,7 +2063,7 @@ dialog::backdrop {
   padding: 12px 16px;
   border: 1px solid #17191866;
   border-radius: 3px;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   transition:
     background 0.2s,
@@ -2081,7 +2110,7 @@ dialog::backdrop {
     min-height: 0;
   }
   .contact-details address {
-    font-size: 15px;
+    font-size: 22px;
   }
   .social-section h3 {
     font-size: 18px;
@@ -2176,6 +2205,47 @@ dialog::backdrop {
   width: 17px;
   height: 17px;
 }
+.gallery-dialog {
+  width: 100%;
+  max-width: 100%;
+  height: 100dvh;
+  max-height: 100dvh;
+  margin: 0;
+  padding: 64px 16px 16px;
+  border-radius: 0;
+  background: transparent;
+  color: white;
+  box-shadow: none;
+}
+.gallery-dialog[open] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gallery-full-image {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.gallery-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid #ffffff80;
+  border-radius: 50%;
+  background: var(--ink);
+  color: white;
+  font-size: 32px;
+  line-height: 1;
+}
+.gallery-dialog :focus-visible {
+  outline-color: white;
+}
 .gallery-slide figcaption {
   display: flex;
   gap: 12px;
@@ -2211,7 +2281,7 @@ dialog::backdrop {
   padding: 10px 0;
   border: 0;
   background: transparent;
-  font-size: 12px;
+  font-size: 14px;
   text-align: left;
 }
 .gallery-autoplay > span:first-child {
@@ -2267,7 +2337,7 @@ dialog::backdrop {
   color: white;
 }
 .gallery-hint {
-  font-size: 11px;
+  font-size: 14px;
   color: var(--muted);
   margin: 15px 0 0;
 }
@@ -2276,7 +2346,7 @@ dialog::backdrop {
     gap: 10px;
   }
   .header nav a {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 @media (max-width: 760px) {
@@ -2284,7 +2354,7 @@ dialog::backdrop {
     font-size: 14px;
   }
   .gallery-slide h3 {
-    font-size: 14px;
+    font-size: 16px;
   }
   .gallery-controls {
     gap: 10px;
@@ -2302,7 +2372,66 @@ dialog::backdrop {
     height: 35px;
   }
   .gallery-hint {
-    font-size: 10px;
+    font-size: 14px;
+  }
+}
+/* Читабельний текст адреси та зручні переноси після збільшення шрифтів. */
+.hero-note {
+  max-width: 540px;
+  line-height: 1.65;
+  align-items: flex-start;
+}
+.hero-note svg {
+  margin-top: 5px;
+}
+.contact-details address {
+  font-weight: 500;
+  line-height: 1.55;
+}
+.footer-address {
+  font-size: 18px;
+  color: #e0e5dc;
+  line-height: 1.6;
+}
+.hero-actions,
+.services-help {
+  flex-wrap: wrap;
+}
+.service-card p,
+.section-intro,
+.price-row > span {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 760px) {
+  .hero-note {
+    max-width: 100%;
+  }
+  .header-phones {
+    margin-right: 10px;
+  }
+  .footer-address {
+    font-size: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .service-card h3,
+  .service-card p {
+    min-height: 0;
+  }
+  .service-card p {
+    max-width: none;
+  }
+}
+@media (max-width: 380px) {
+  .header .logo {
+    font-size: 16px;
+  }
+  .header .logo-image {
+    width: 36px;
+    height: 36px;
   }
 }
 body:not(.js) .price-row {

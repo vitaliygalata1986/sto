@@ -168,6 +168,43 @@ document.querySelector('#year').textContent = new Date().getFullYear();
 // Галерея: локальний Swiper, 5 секунд між переходами. Якщо бібліотека
 // недоступна, фотографії залишаються звичайним горизонтальним списком.
 const gallery = document.querySelector('.gallery-carousel');
+const galleryDialog = document.querySelector('#gallery-dialog');
+const fullImage = galleryDialog.querySelector('.gallery-full-image');
+const imageError = galleryDialog.querySelector('.gallery-image-error');
+let galleryTrigger = null;
+
+// Показываем оригинал через img: переход по прямой ссылке на AVIF может
+// запускать скачивание, если сервер отдаёт application/octet-stream.
+gallery.querySelectorAll('.gallery-photo').forEach((link) => {
+  link.setAttribute('aria-haspopup', 'dialog');
+  link.setAttribute('aria-controls', 'gallery-dialog');
+  link.setAttribute('aria-label', link.getAttribute('aria-label').replace(' (нова вкладка)', ''));
+});
+gallery.addEventListener('click', (event) => {
+  const link = event.target.closest('.gallery-photo');
+  if (!link || event.defaultPrevented || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+  event.preventDefault();
+  galleryTrigger = link;
+  imageError.hidden = true;
+  fullImage.hidden = false;
+  fullImage.alt = link.querySelector('img').alt;
+  fullImage.src = link.href;
+  galleryDialog.showModal();
+  document.body.classList.add('dialog-open');
+});
+fullImage.addEventListener('error', () => {
+  fullImage.hidden = true;
+  imageError.hidden = false;
+});
+galleryDialog.querySelector('.gallery-close').addEventListener('click', () => galleryDialog.close());
+galleryDialog.addEventListener('click', (event) => {
+  if (event.target === galleryDialog) galleryDialog.close();
+});
+galleryDialog.addEventListener('close', () => {
+  document.body.classList.toggle('dialog-open', Boolean(document.querySelector('dialog[open]')));
+  galleryTrigger?.focus({ preventScroll: true });
+});
+
 if (gallery && typeof window.Swiper === 'function') {
   const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
   const pauseButton = gallery.querySelector('.gallery-autoplay');
@@ -256,9 +293,9 @@ if (gallery && typeof window.Swiper === 'function') {
     if (event.matches) manuallyPaused = true;
     syncGalleryAutoplay();
   });
-  new MutationObserver(syncGalleryAutoplay).observe(dialog, {
-    attributes: true,
-    attributeFilter: ['open'],
+  const dialogObserver = new MutationObserver(syncGalleryAutoplay);
+  document.querySelectorAll('dialog').forEach((modal) => {
+    dialogObserver.observe(modal, { attributes: true, attributeFilter: ['open'] });
   });
   // Swiper відновлює autoplay після свайпу; повторно застосовуємо ручну паузу.
   gallerySwiper.on('sliderFirstMove', () => gallerySwiper.autoplay.stop());
