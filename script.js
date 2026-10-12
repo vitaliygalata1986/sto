@@ -142,14 +142,14 @@ dialog.addEventListener('click', (event) => {
 
 copyButton.addEventListener('click', async () => {
   const text = [
-    'ОБЕРТ — список робіт для обговорення',
+    'AUTO FIX — список робіт для обговорення',
     ...selectedServices().map(
       (input) => `• ${input.dataset.service}: від ${formatter.format(Number(input.value))} грн`,
     ),
     `Разом: від ${formatter.format(
       selectedTotal(),
     )} грн (демонстраційний прайс, без деталей та матеріалів).`,
-    'Фактичну ціну і запис потрібно підтвердити телефоном: +380 98 891 24 54.',
+    'Фактичну ціну і запис потрібно підтвердити телефоном: +380 66 056 81 21.',
   ].join('\n');
   try {
     await navigator.clipboard.writeText(text);
@@ -164,3 +164,105 @@ copyButton.addEventListener('click', async () => {
 });
 
 document.querySelector('#year').textContent = new Date().getFullYear();
+
+// Галерея: локальний Swiper, 5 секунд між переходами. Якщо бібліотека
+// недоступна, фотографії залишаються звичайним горизонтальним списком.
+const gallery = document.querySelector('.gallery-carousel');
+if (gallery && typeof window.Swiper === 'function') {
+  const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const pauseButton = gallery.querySelector('.gallery-autoplay');
+  const sliderElement = gallery.querySelector('.gallery-swiper');
+  let manuallyPaused = motionPreference.matches;
+  let pointerInside = false;
+
+  const gallerySwiper = new window.Swiper(sliderElement, {
+    slidesPerView: 1.12,
+    spaceBetween: 16,
+    speed: motionPreference.matches ? 0 : 650,
+    loop: true,
+    grabCursor: true,
+    autoplay: {
+      enabled: false,
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      600: { slidesPerView: 2, spaceBetween: 20 },
+      1000: { slidesPerView: 3, spaceBetween: 24 },
+    },
+    navigation: {
+      prevEl: gallery.querySelector('.gallery-prev'),
+      nextEl: gallery.querySelector('.gallery-next'),
+    },
+    pagination: {
+      el: gallery.querySelector('.gallery-pagination'),
+      clickable: true,
+      bulletElement: 'button',
+    },
+    a11y: {
+      enabled: true,
+      wrapperLiveRegion: false,
+      prevSlideMessage: 'Попереднє фото',
+      nextSlideMessage: 'Наступне фото',
+      paginationBulletMessage: 'Перейти до фото {{index}}',
+      slideLabelMessage: '{{index}} з {{slidesLength}}',
+      itemRoleDescriptionMessage: 'слайд',
+    },
+  });
+
+  // Єдина перевірка причин паузи не дає mouseleave відновити прокрутку,
+  // якщо відвідувач зупинив її кнопкою або фокус досі всередині галереї.
+  function syncGalleryAutoplay() {
+    const shouldPause =
+      manuallyPaused ||
+      pointerInside ||
+      document.hidden ||
+      gallery.contains(document.activeElement) ||
+      document.querySelector('dialog[open]');
+    if (shouldPause) gallerySwiper.autoplay.stop();
+    else if (!gallerySwiper.autoplay.running) gallerySwiper.autoplay.start();
+
+    pauseButton.setAttribute('aria-pressed', String(manuallyPaused));
+    pauseButton.setAttribute(
+      'aria-label',
+      manuallyPaused
+        ? 'Увімкнути автоматичну зміну фотографій'
+        : 'Зупинити автоматичну зміну фотографій',
+    );
+    pauseButton.querySelector('.gallery-autoplay-label').textContent = manuallyPaused
+      ? 'Відтворити'
+      : 'Пауза';
+    pauseButton.firstElementChild.textContent = manuallyPaused ? '▶' : 'Ⅱ';
+  }
+
+  pauseButton.addEventListener('click', () => {
+    manuallyPaused = !manuallyPaused;
+    syncGalleryAutoplay();
+  });
+  gallery.addEventListener('pointerenter', (event) => {
+    if (event.pointerType !== 'mouse' && event.pointerType !== 'pen') return;
+    pointerInside = true;
+    syncGalleryAutoplay();
+  });
+  gallery.addEventListener('pointerleave', () => {
+    pointerInside = false;
+    syncGalleryAutoplay();
+  });
+  gallery.addEventListener('focusin', syncGalleryAutoplay);
+  gallery.addEventListener('focusout', () => requestAnimationFrame(syncGalleryAutoplay));
+  document.addEventListener('visibilitychange', syncGalleryAutoplay);
+  motionPreference.addEventListener('change', (event) => {
+    gallerySwiper.params.speed = event.matches ? 0 : 650;
+    if (event.matches) manuallyPaused = true;
+    syncGalleryAutoplay();
+  });
+  new MutationObserver(syncGalleryAutoplay).observe(dialog, {
+    attributes: true,
+    attributeFilter: ['open'],
+  });
+  // Swiper відновлює autoplay після свайпу; повторно застосовуємо ручну паузу.
+  gallerySwiper.on('sliderFirstMove', () => gallerySwiper.autoplay.stop());
+  gallerySwiper.on('touchEnd', () => requestAnimationFrame(syncGalleryAutoplay));
+  gallery.querySelector('.gallery-controls').hidden = false;
+  syncGalleryAutoplay();
+}
