@@ -1145,6 +1145,58 @@ dialog::backdrop {
   font-size: 12px;
   margin-bottom: 13px;
 }
+#contact-title {
+  padding-right: 12px;
+}
+#contact-intro {
+  color: var(--muted);
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+.contact-options {
+  display: grid;
+  gap: 10px;
+}
+.contact-option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--white);
+  font-size: 17px;
+  font-weight: 600;
+}
+.contact-option:hover {
+  border-color: var(--ink);
+  background: var(--soft);
+}
+.contact-option > svg {
+  margin-left: auto;
+  width: 18px;
+  height: 18px;
+}
+.contact-option small {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 400;
+}
+.contact-option-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--white);
+}
+.contact-viber .contact-option-icon { background: #7360b9; }
+.contact-telegram .contact-option-icon { background: #087fb4; }
+.contact-whatsapp .contact-option-icon { background: #178646; }
 #dialog-intro {
   font-size: 16px;
   color: var(--muted);

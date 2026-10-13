@@ -126,7 +126,7 @@ reviewButton.addEventListener('click', () => {
   dialog.showModal();
   document.body.classList.add('dialog-open');
 });
-document.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
+dialog.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
 dialog.addEventListener('close', () => document.body.classList.remove('dialog-open'));
 dialog.addEventListener('click', (event) => {
   const bounds = dialog.getBoundingClientRect();
@@ -139,6 +139,39 @@ dialog.addEventListener('click', (event) => {
   )
     dialog.close();
 });
+
+// Без підтримки dialog або JavaScript залишається звичайне посилання для дзвінка.
+const contactDialog = document.querySelector('#contact-dialog');
+const contactTrigger = document.querySelector('[data-contact-open]');
+if (contactDialog && contactTrigger && typeof contactDialog.showModal === 'function') {
+  contactTrigger.setAttribute('role', 'button');
+  contactTrigger.setAttribute('aria-haspopup', 'dialog');
+  contactTrigger.setAttribute('aria-controls', 'contact-dialog');
+  contactTrigger.addEventListener('click', (event) => {
+    event.preventDefault();
+    contactDialog.showModal();
+    document.body.classList.add('dialog-open');
+  });
+  contactTrigger.addEventListener('keydown', (event) => {
+    if (event.key === ' ') {
+      event.preventDefault();
+      contactTrigger.click();
+    }
+  });
+  contactDialog.querySelector('.dialog-close').addEventListener('click', () => contactDialog.close());
+  contactDialog.addEventListener('close', () => {
+    document.body.classList.toggle('dialog-open', Boolean(document.querySelector('dialog[open]')));
+    contactTrigger.focus({ preventScroll: true });
+  });
+  contactDialog.addEventListener('click', (event) => {
+    const bounds = contactDialog.getBoundingClientRect();
+    if (event.target === contactDialog &&
+        (event.clientX < bounds.left || event.clientX > bounds.right ||
+         event.clientY < bounds.top || event.clientY > bounds.bottom)) {
+      contactDialog.close();
+    }
+  });
+}
 
 copyButton.addEventListener('click', async () => {
   const text = [
